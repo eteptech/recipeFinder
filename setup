@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export SECRET_KEY="your secret key"
+export DATABASE_URI="mysql://root:emmydavii@localhost:3306/recipedb"
+export FLASK_APP=app
+export FLASK_ENV=development
+

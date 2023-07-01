@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - RecipeFinder</title>
+    <link rel = "stylesheet" href ="../static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('main.index') }}">FlaskApp</a>
+        <a href="#">Posts</a>
+        <a href="#">Categories</a>
+        <a href="#">Questions</a>
+    </nav> 
+    <header>
+        <div class="logo">Recipe Finder</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Favorites</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

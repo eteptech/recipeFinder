@@ -1,0 +1,5 @@
+export SECRET_KEY="your secret key"
+export DATABASE_URI="mysql+mysqlconnector://root:emmydavii@localhost:3306/recipedb"
+export FLASK_APP=app
+export FLASK_ENV=development
+mysql+mysqlconnector://username:password@localhost:3306/database
