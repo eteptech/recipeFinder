@@ -1,23 +1,24 @@
 from flask import render_template, request
 from app.main import bp
+from app.models import Recipe
+from app.extensions import db
 
 @bp.route('/')
 def index():
     return render_template('index.html')
 
-@bp.route('/api/recipes')
-def recipes():
-    name =  "Chicken"
-    instruction = "Cook before eaten"
-    return f"{name}, {instruction}"    
 
-@bp.route('/api/recipes/save')
-def save_recipe():
+@bp.route('/submit', methods=['GET'])
+def submit():
+    return render_template('recipe.html')
+
+@bp.route('/submit_recipe', methods=['POST'])
+def submit_recipe():
+    title = request.form.get('name')
+    description = request.form.get('ingredients')
+    instructions = request.form.get('instructions')
     
-    
-    name = request.form.get("name")
-    instructions = request.form.get("instructions")
-    
-    return f"{name},  {instructions} Submitted to form!"
+
+    return f'Recipe added successfully{title}'
     
     

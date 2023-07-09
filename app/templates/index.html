@@ -1,22 +1,49 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <span class="title"><h1>{% block title %} Recipe Finder - Discover Delicious Recipes {% endblock %}</h1></span>
-    
+<section class="wrapper">
 
-    <header>
-        <h1>Welcome to Recipe Finder</h1>
-        <p>Discover Delicious Recipes</p>
-      </header>
-
-    <div class="content">
-        <input type="text" class="search-input" placeholder="Enter your search query">
-        <button class="search-button">Search</button>
-
-        <form action = "/api/recipes/save" method = "POST">
-            <input type = "text" name = "name" placeholder = "recipe name" required=""/>
-            <input type = "text" name = "instructions" placeholder = "instructions" required =""/>
-            <input type = "submit" value = "submit"/>
-        </form>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h2>Find Delicious Recipes</h2>
+        <p>Discover a wide variety of recipes to suit your taste.</p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
     </div>
+  </section>
+
+  <section class="search">
+    <div class="container">
+      <h2>Search Recipes</h2>
+      <form class="search-form">
+        <input type="text" placeholder="Enter keyword...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="recipes">
+    <div class="container">
+      <h2>Featured Recipes</h2>
+      <div class="recipe-card">
+        <img src="../static/images/bg-ingredients.png" alt="Recipe 1">
+        <h3>Delicious Pasta</h3>
+        <p class="recipe-info">Prep Time: 20 mins | Cook Time: 30 mins</p>
+      </div>
+      <div class="recipe-card">
+        <img src="../static/images/grapes-icon.png" alt="Recipe 2">
+        <h3>Spicy Chicken Curry</h3>
+        <p class="recipe-info">Prep Time: 15 mins | Cook Time: 40 mins</p>
+      </div>
+      <div class="recipe-card">
+        <img src="../static/images/bg-tips.png" alt="Recipe 3">
+        <h3>Refreshing Salad</h3>
+        <p class="recipe-info">Prep Time: 10 mins | Cook Time: 0 mins</p>
+      </div>
+    </div>
+  </section>
+
+</section>
+
 {% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="wrapper">
+
+<h1>Submit Recipe</h1>
+    <form method="POST" action="/submit_recipe">
+        <label for="name">Recipe Name:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="ingredients">Ingredients:</label><br>
+        <textarea id="decription" name="decription" required></textarea><br><br>
+        
+        <label for="instructions">Instructions:</label><br>
+        <textarea id="instructions" name="instructions" required></textarea><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</section>
+
+{% endblock %}
